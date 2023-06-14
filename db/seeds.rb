@@ -9,7 +9,7 @@
 user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password")
 user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password")
 
-apartments = [
+apartments1 = [
     {street: 'World 1-1',
     unit: '1',
     city: 'Overworld',
@@ -20,7 +20,10 @@ apartments = [
     bathrooms: 2,
     pets: 'Yes'
     image: 'https://mario.wiki.gallery/images/2/24/SMB_Super_Mushroom_Screenshot.png'
-},
+}
+]
+
+apartments2 = [ 
     {street: 'World 1-2',
     unit: '2',
     city: 'Underground',
@@ -34,9 +37,15 @@ apartments = [
 }
 ]
 
-def apartments.each do |each_apartment|
-    Apartment.create each_apartment
-    puts "Creating apartment #{each_apartment}"
+apartments1.each do |apartment|
+    user1.apartments.create(apartment)
+    puts "Creating apartment #{apartment}"
 end
+
+apartments2.each do |apartment|
+    user2.apartments.create(apartment)
+    puts "Creating apartment #{apartment}"
+end
+
 
 
