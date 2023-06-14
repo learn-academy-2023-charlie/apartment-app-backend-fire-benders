@@ -20,6 +20,17 @@ apartments = [
     bathrooms: 2,
     pets: 'Yes'
     image: 'https://mario.wiki.gallery/images/2/24/SMB_Super_Mushroom_Screenshot.png'
+},
+    {street: 'World 1-2',
+    unit: '2',
+    city: 'Underground',
+    state: 'California',
+    square_footage: 1800,
+    price: '$25,000',
+    bedrooms: 9,
+    bathrooms: 1,
+    pets: 'Yes'
+    image: 'https://mario.wiki.gallery/images/3/39/SMB_NES_World_2-3_Screenshot.png'
 }
 ]
 
