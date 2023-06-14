@@ -8,3 +8,24 @@
 
 user1 = User.where(email: "test1@example.com").first_or_create(password: "password", password_confirmation: "password")
 user2 = User.where(email: "test2@example.com").first_or_create(password: "password", password_confirmation: "password")
+
+apartments = [
+    {street: 'World 1-1',
+    unit: '1',
+    city: 'Overworld',
+    state: 'California',
+    square_footage: 1200,
+    price: '$4,000',
+    bedrooms: 3,
+    bathrooms: 2,
+    pets: 'Yes'
+    image: 'https://mario.wiki.gallery/images/2/24/SMB_Super_Mushroom_Screenshot.png'
+}
+]
+
+def apartments.each do |each_apartment|
+    Apartment.create each_apartment
+    puts "Creating apartment #{each_apartment}"
+end
+
+
